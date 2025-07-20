@@ -1,6 +1,6 @@
 # MiniHTTP Server
 
-A lightweight HTTP server built from scratch in Go using the net package. It handles basic routing, dynamic paths, query parameters, and concurrent request handling using goroutines.
+A lightweight HTTP server built from scratch in Go using the net package. It handles basic routing, dynamic paths, query parameters, and concurrent requests using goroutines.
 
 ## Features
 
