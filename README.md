@@ -14,7 +14,7 @@ A lightweight HTTP server built from scratch in Go using the net package. It han
 
 ## How It Uses the `net` Package
 
-MiniHTTP leverages Go’s `net` package to manage TCP connections at a low level, bypassing `net/http` for a lean, custom HTTP server:
+MiniHTTP leverages Go’s `net` package to manage TCP connections at a low level:
 
 1. **TCP Listener**:
    - `net.Listen("tcp", ":8080")` creates a TCP listener on port 8080 to accept incoming connections.
