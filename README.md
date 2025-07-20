@@ -20,7 +20,7 @@ MiniHTTP leverages Go’s `net` package to manage TCP connections at a low level
    - `net.Listen("tcp", ":PORT")` creates a TCP listener on a specific port to accept incoming connections.
 
 2. **Connection Handling**:
-   - `Listener.Accept()` grabs incoming TCP connections (`net.Conn`), spawning a goroutine per connection for concurrency.
+   - `Listener.Accept()` retrieves incoming TCP connections (`net.Conn`), with each connection handled in a separate goroutine.
    - Each connection is processed in `handleConnction`, which reads requests and writes responses.
 
 3. **Reading Requests**:
