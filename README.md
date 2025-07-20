@@ -17,10 +17,10 @@ A lightweight HTTP server built from scratch in Go using the net package. It han
 MiniHTTP leverages Go’s `net` package to manage TCP connections at a low level:
 
 1. **TCP Listener**:
-   - `net.Listen("tcp", ":8080")` creates a TCP listener on port 8080 to accept incoming connections.
+   - `net.Listen("tcp", ":PORT")` creates a TCP listener on a specific port to accept incoming connections.
 
 2. **Connection Handling**:
-   - `l.Accept()` grabs incoming TCP connections (`net.Conn`), spawning a goroutine per connection for concurrency.
+   - `Listener.Accept()` grabs incoming TCP connections (`net.Conn`), spawning a goroutine per connection for concurrency.
    - Each connection is processed in `handleConnction`, which reads requests and writes responses.
 
 3. **Reading Requests**:
