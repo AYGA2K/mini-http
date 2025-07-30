@@ -21,11 +21,11 @@ func ListenAndServe(addr string, handler Handler) error {
 			log.Println("Error accepting connection:", err)
 			continue
 		}
-		go handleConnction(conn, handler)
+		go handleConnection(conn, handler)
 	}
 }
 
-func handleConnction(conn net.Conn, handler Handler) {
+func handleConnection(conn net.Conn, handler Handler) {
 	defer conn.Close()
 	reader := bufio.NewReader(conn)
 

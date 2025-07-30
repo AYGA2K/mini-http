@@ -21,7 +21,7 @@ MiniHTTP leverages Go’s `net` package to manage TCP connections at a low level
 
 2. **Connection Handling**:
    - `Listener.Accept()` retrieves incoming TCP connections (`net.Conn`), with each connection handled in a separate goroutine.
-   - Each connection is processed in `handleConnction`, which reads requests and writes responses.
+   - Each connection is processed in `handleConnection`, which reads requests and writes responses.
 
 3. **Reading Requests**:
    - A `bufio.Reader` on `net.Conn` reads raw HTTP request data (method, path, headers, body).
@@ -49,4 +49,3 @@ MiniHTTP leverages Go’s `net` package to manage TCP connections at a low level
    - `curl http://localhost:8080/user/Alice` → `Hello, Alice`
    - `curl http://localhost:8080/search?q=foo` → `Search for: foo`
    - `curl -X POST -d "test" http://localhost:8080/submit` → `Received: test`
-
